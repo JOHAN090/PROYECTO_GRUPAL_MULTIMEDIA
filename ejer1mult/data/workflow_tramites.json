@@ -1,0 +1,92 @@
+[
+    {
+        "codFlujo": "F1",
+        "nombreFlujo": "Inscripcion de Materias",
+        "codProceso": "P1",
+        "codProcesoSiguiente": "P2",
+        "tipo": "I",
+        "codRol": "E",
+        "pantalla": "verificar_matricula.php",
+        "descripcion": "El estudiante inicia el tramite y el sistema verifica si esta matriculado."
+    },
+    {
+        "codFlujo": "F1",
+        "nombreFlujo": "Inscripcion de Materias",
+        "codProceso": "P2",
+        "codProcesoSiguiente": "P3",
+        "tipo": "P",
+        "codRol": "E",
+        "pantalla": "matriculacion.php",
+        "descripcion": "Si no esta matriculado, el estudiante completa el subproceso de matricula."
+    },
+    {
+        "codFlujo": "F1",
+        "nombreFlujo": "Inscripcion de Materias",
+        "codProceso": "P3",
+        "codProcesoSiguiente": "P4",
+        "tipo": "P",
+        "codRol": "E",
+        "pantalla": "registrar.php?tipo=inscripcion",
+        "descripcion": "El estudiante llena el formulario de inscripcion de materias."
+    },
+    {
+        "codFlujo": "F1",
+        "nombreFlujo": "Inscripcion de Materias",
+        "codProceso": "P4",
+        "codProcesoSiguiente": "P5",
+        "tipo": "P",
+        "codRol": "K",
+        "pantalla": "listar.php?tipo=inscripcion",
+        "descripcion": "Kardex revisa la solicitud enviada por el estudiante."
+    },
+    {
+        "codFlujo": "F1",
+        "nombreFlujo": "Inscripcion de Materias",
+        "codProceso": "P5",
+        "codProcesoSiguiente": null,
+        "tipo": "C",
+        "codRol": "K",
+        "pantalla": "actualizar_estado.php",
+        "descripcion": "Kardex aprueba o rechaza la solicitud y finaliza el tramite."
+    },
+    {
+        "codFlujo": "F2",
+        "nombreFlujo": "Solicitud de Certificado Academico",
+        "codProceso": "P1",
+        "codProcesoSiguiente": "P2",
+        "tipo": "I",
+        "codRol": "E",
+        "pantalla": "registrar.php?tipo=certificado",
+        "descripcion": "El estudiante inicia la solicitud del certificado academico."
+    },
+    {
+        "codFlujo": "F2",
+        "nombreFlujo": "Solicitud de Certificado Academico",
+        "codProceso": "P2",
+        "codProcesoSiguiente": "P3",
+        "tipo": "P",
+        "codRol": "S",
+        "pantalla": "guardar.php",
+        "descripcion": "El sistema valida los datos y guarda la solicitud en JSON."
+    },
+    {
+        "codFlujo": "F2",
+        "nombreFlujo": "Solicitud de Certificado Academico",
+        "codProceso": "P3",
+        "codProcesoSiguiente": "P4",
+        "tipo": "P",
+        "codRol": "K",
+        "pantalla": "listar.php?tipo=certificado",
+        "descripcion": "Kardex revisa la solicitud de certificado academico."
+    },
+    {
+        "codFlujo": "F2",
+        "nombreFlujo": "Solicitud de Certificado Academico",
+        "codProceso": "P4",
+        "codProcesoSiguiente": null,
+        "tipo": "C",
+        "codRol": "K",
+        "pantalla": "actualizar_estado.php",
+        "descripcion": "Kardex emite, aprueba o rechaza el certificado y cierra el tramite."
+    }
+]

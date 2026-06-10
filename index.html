@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios Multimedia</title>
+    <meta
+      name="description"
+      content="Página grupal de ejercicios de multimedia, incluyendo un avatar 3D interactivo."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Contenedor para el fondo animado -->
+    <div id="particles-js"></div>
+
+    <main class="container">
+      <header>
+        <h1 class="title">Ejercicios Multimedia</h1>
+        <p class="subtitle">
+          Explora nuestros proyectos y experiencias interactivas
+        </p>
+      </header>
+
+      <section class="cards-wrapper">
+        <!-- Tarjeta 1 -->
+        <a href="ejer1mult/login.php" class="card tilt-card" id="card1">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-icon">01</div>
+            <h2>Digitalización de trámites universitarios UMSA</h2>
+            <p>
+              Sistema para seleccionar trámites universitarios (inscripción de
+              materias, emisión de certificados o solicitud de títulos) y
+              desarrollar una propuesta de modernización digital considerando
+              los componentes de modelado del proceso y BPM.
+            </p>
+            <span class="view-btn">Ver Trámites</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta 2 -->
+        <a href="ejercicio2/ejercicio2.html" class="card tilt-card" id="card2">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-icon">02</div>
+            <h2>
+              Animación sincronizada en Unity, desarrollo 3D y realidad virtual
+            </h2>
+            <p>
+              Se desarrolla en Unity una escena donde múltiples personajes (tres
+              personajes) realizan una coreografía sincronizada con música.
+            </p>
+            <span class="view-btn">Ver Animación</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta 3 -->
+        <a href="ejercicio3.html" class="card tilt-card" id="card3">
+          <div class="card-border"></div>
+          <div class="card-content">
+            <div class="card-icon">03</div>
+            <h2>Construcción de un avatar digital mediante fotogrametría</h2>
+            <p>
+              Captura de múltiples fotografías de un integrante del grupo y,
+              utilizando una herramienta de fotogrametría, se generó un modelo
+              tridimensional realista.
+            </p>
+            <span class="view-btn">Ver 3D</span>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

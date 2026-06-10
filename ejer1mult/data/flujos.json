@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "fecha": "2026-05-27 15:51:15",
+        "ci": "KARDEX01",
+        "nombre": "Responsable de Kardex",
+        "rol": "kardex",
+        "tramite": "General",
+        "codFlujo": "",
+        "codProceso": "",
+        "accion": "Inicio de sesión",
+        "detalle": "El usuario ingresó al sistema.",
+        "estado": "Completado"
+    },
+    {
+        "id": 2,
+        "fecha": "2026-06-01 19:54:37",
+        "ci": "KARDEX01",
+        "nombre": "Responsable de Kardex",
+        "rol": "kardex",
+        "tramite": "General",
+        "codFlujo": "",
+        "codProceso": "",
+        "accion": "Inicio de sesión",
+        "detalle": "El usuario ingresó al sistema.",
+        "estado": "Completado"
+    },
+    {
+        "id": 3,
+        "fecha": "2026-06-05 22:59:09",
+        "ci": "KARDEX01",
+        "nombre": "Responsable de Kardex",
+        "rol": "kardex",
+        "tramite": "General",
+        "codFlujo": "",
+        "codProceso": "",
+        "accion": "Inicio de sesión",
+        "detalle": "El usuario ingresó al sistema.",
+        "estado": "Completado"
+    }
+]

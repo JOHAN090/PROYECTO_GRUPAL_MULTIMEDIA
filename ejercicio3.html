@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Avatar Interactivo 3D</title>
+    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+    <style>
+        /* Estilos básicos para que la web ocupe toda la pantalla */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f 0%, #0f0f1a 100%);
+        }
+
+        /* Contenedor del título */
+        .interfaz-usuario {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            text-align: center;
+            color: white;
+            pointer-events: none; /* No interfiere con los clics en el 3D */
+        }
+
+        h1 {
+            margin: 0 0 5px 0;
+            font-size: 24px;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Estilos del visor 3D */
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            --poster-color: transparent;
+        }
+        /* Loading Bar Styles */
+        .progress-bar-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            color: white;
+            z-index: 20;
+            background: rgba(15, 15, 26, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 252, 241, 0.3);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        
+        .loading-text {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #c5c6c7;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: #66fcf1;
+            transition: width 0.2s ease-out;
+            box-shadow: 0 0 10px #66fcf1;
+        }
+
+        /* Ocultar la barra de carga por defecto del model-viewer */
+        model-viewer::part(default-progress-bar) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="interfaz-usuario">
+        <h1>Avatar Fotogramétrico Interactivo</h1>
+        <p>Usa el mouse o tus dedos para rotar y hacer zoom</p>
+    </div>
+
+    <!-- Contenedor de la barra de carga -->
+    <div class="progress-bar-container" id="loading-container">
+        <div class="loading-text">Espera un momento mientras se carga el modelo 3D (<span id="progress-percent">0</span>%)</div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+    </div>
+
+    <model-viewer 
+        src="Malla_con_textura_1.glb" 
+        alt="Avatar digital 3D obtenido por fotogrametría"
+        auto-rotate 
+        camera-controls 
+        touch-action="none"
+        shadow-intensity="1.5"
+        shadow-softness="1"
+        exposure="1"
+        environment-image="neutral"
+        ar>
+    </model-viewer>
+
+    <script>
+        const modelViewer = document.querySelector('model-viewer');
+        const loadingContainer = document.getElementById('loading-container');
+        const progressFill = document.getElementById('progress-fill');
+        const progressPercent = document.getElementById('progress-percent');
+
+        // Escuchar el evento de progreso de carga del modelo 3D
+        modelViewer.addEventListener('progress', (event) => {
+            const progress = event.detail.totalProgress;
+            const percentage = Math.round(progress * 100);
+            
+            // Actualizar el ancho de la barra y el texto
+            progressFill.style.width = percentage + '%';
+            progressPercent.textContent = percentage;
+        });
+
+        // Esperar a que el modelo esté completamente cargado y renderizado
+        modelViewer.addEventListener('load', () => {
+            // Asegurarnos de que muestre 100% al final
+            progressFill.style.width = '100%';
+            progressPercent.textContent = '100';
+
+            // Retraso para que el usuario alcance a ver el 100%
+            setTimeout(() => {
+                loadingContainer.style.opacity = '0';
+                loadingContainer.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => {
+                    loadingContainer.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+    </script>
+</body>
+</html>

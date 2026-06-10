@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1264" viewBox="0 0 1200 1264">
+<defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#0b1020"/>
+        <stop offset="100%" stop-color="#172143"/>
+    </linearGradient>
+    <filter id="shadow">
+        <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+</defs>
+<rect width="1200" height="1264" fill="url(#bg)"/>
+<text x="600" y="54" fill="#ffffff" font-family="Arial" font-size="34" font-weight="700" text-anchor="middle">Diagrama de Flujo: Login y Roles</text>
+<rect x="190" y="92" width="820" height="70" rx="20" fill="#121936" stroke="#37d6b3" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="135.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Inicio</text>
+<line x1="600" y1="168" x2="600" y2="186" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,184 609,184 600,200" fill="#aab5cf"/>
+<rect x="190" y="196" width="820" height="70" rx="20" fill="#121936" stroke="#4f8cff" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="239.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Usuario ingresa a la plataforma UMSA Digital</text>
+<line x1="600" y1="272" x2="600" y2="290" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,288 609,288 600,304" fill="#aab5cf"/>
+<rect x="190" y="300" width="820" height="70" rx="20" fill="#121936" stroke="#4f8cff" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="343.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Escribe correo y contraseña en el formulario de login</text>
+<line x1="600" y1="376" x2="600" y2="394" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,392 609,392 600,408" fill="#aab5cf"/>
+<rect x="190" y="404" width="820" height="70" rx="20" fill="#121936" stroke="#37d6b3" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="447.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Sistema valida los datos con usuarios.json</text>
+<line x1="600" y1="480" x2="600" y2="498" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,496 609,496 600,512" fill="#aab5cf"/>
+<rect x="190" y="508" width="820" height="70" rx="20" fill="#121936" stroke="#f7c948" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="551.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">¿Credenciales correctas?</text>
+<line x1="600" y1="584" x2="600" y2="602" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,600 609,600 600,616" fill="#aab5cf"/>
+<rect x="190" y="612" width="820" height="70" rx="20" fill="#121936" stroke="#ff6b6b" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="655.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">No → muestra mensaje de error y vuelve al login</text>
+<line x1="600" y1="688" x2="600" y2="706" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,704 609,704 600,720" fill="#aab5cf"/>
+<rect x="190" y="716" width="820" height="70" rx="20" fill="#121936" stroke="#4f8cff" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="759.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Sí → identifica el rol del usuario: estudiante o Kardex</text>
+<line x1="600" y1="792" x2="600" y2="810" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,808 609,808 600,824" fill="#aab5cf"/>
+<rect x="190" y="820" width="820" height="70" rx="20" fill="#121936" stroke="#4f8cff" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="863.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Si es estudiante → muestra panel de trámites y mis solicitudes</text>
+<line x1="600" y1="896" x2="600" y2="914" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,912 609,912 600,928" fill="#aab5cf"/>
+<rect x="190" y="924" width="820" height="70" rx="20" fill="#121936" stroke="#4f8cff" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="967.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Si es Kardex → muestra panel para revisar solicitudes y flujos</text>
+<line x1="600" y1="1000" x2="600" y2="1018" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,1016 609,1016 600,1032" fill="#aab5cf"/>
+<rect x="190" y="1028" width="820" height="70" rx="20" fill="#121936" stroke="#37d6b3" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="1071.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Sistema registra el acceso y movimiento en flujos.json</text>
+<line x1="600" y1="1104" x2="600" y2="1122" stroke="#aab5cf" stroke-width="4" stroke-linecap="round"/>
+<polygon points="591,1120 609,1120 600,1136" fill="#aab5cf"/>
+<rect x="190" y="1132" width="820" height="70" rx="20" fill="#121936" stroke="#37d6b3" stroke-width="3" filter="url(#shadow)"/>
+<text x="600" y="1175.0" fill="#f4f7fb" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle">Fin</text>
+</svg>

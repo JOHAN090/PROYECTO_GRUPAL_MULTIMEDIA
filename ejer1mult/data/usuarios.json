@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan Daniel Vargas Quispe",
+    "ci": "12345678",
+    "correo": "estudiante@umsa.bo",
+    "password_hash": "$2y$12$/NrwIIolZSOxSwldThD1kuvZVL448YyAPeftj2x0kIj8zOh2YkiXW",
+    "rol": "estudiante",
+    "carrera": "Informática",
+    "matriculado": true
+  },
+  {
+    "id": 2,
+    "nombre": "Maria Fernanda Choque Lima",
+    "ci": "87654321",
+    "correo": "no.matriculado@umsa.bo",
+    "password_hash": "$2y$12$/NrwIIolZSOxSwldThD1kuvZVL448YyAPeftj2x0kIj8zOh2YkiXW",
+    "rol": "estudiante",
+    "carrera": "Informática",
+    "matriculado": false
+  },
+  {
+    "id": 3,
+    "nombre": "Responsable de Kardex",
+    "ci": "KARDEX01",
+    "correo": "kardex@umsa.bo",
+    "password_hash": "$2y$12$/NrwIIolZSOxSwldThD1kuvZVL448YyAPeftj2x0kIj8zOh2YkiXW",
+    "rol": "kardex",
+    "carrera": "Administración Académica",
+    "matriculado": false
+  }
+]
